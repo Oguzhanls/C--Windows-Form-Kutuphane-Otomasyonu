@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KutuphaneOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kitapdzenle">
+          <Key>
+            <PropertyRef Name="kitap_id" />
+          </Key>
+          <Property Name="kitap_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitap_adi" Type="varchar" MaxLength="50" />
+          <Property Name="kitap_yazari" Type="varchar" MaxLength="50" />
+          <Property Name="yayin_evi" Type="varchar" MaxLength="50" />
+          <Property Name="b_Tarihi" Type="datetime" />
+          <Property Name="kitap_turu" Type="varchar" MaxLength="50" />
+          <Property Name="kitap_raf" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneOtomasyonDBModelStoreContainer">
+          <EntitySet Name="kitapdzenle" EntityType="Self.kitapdzenle" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KutuphaneOtomasyonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="kitapdzenle">
+          <Key>
+            <PropertyRef Name="kitap_id" />
+          </Key>
+          <Property Name="kitap_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitap_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kitap_yazari" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="yayin_evi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="b_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="kitap_turu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kitap_raf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneOtomasyonDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kitapdzenle" EntityType="Self.kitapdzenle" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtomasyonDBModelStoreContainer" CdmEntityContainer="KutuphaneOtomasyonDBEntities">
+          <EntitySetMapping Name="kitapdzenle">
+            <EntityTypeMapping TypeName="KutuphaneOtomasyonDBModel.kitapdzenle">
+              <MappingFragment StoreEntitySet="kitapdzenle">
+                <ScalarProperty Name="kitap_id" ColumnName="kitap_id" />
+                <ScalarProperty Name="kitap_adi" ColumnName="kitap_adi" />
+                <ScalarProperty Name="kitap_yazari" ColumnName="kitap_yazari" />
+                <ScalarProperty Name="yayin_evi" ColumnName="yayin_evi" />
+                <ScalarProperty Name="b_Tarihi" ColumnName="b_Tarihi" />
+                <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+                <ScalarProperty Name="kitap_raf" ColumnName="kitap_raf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

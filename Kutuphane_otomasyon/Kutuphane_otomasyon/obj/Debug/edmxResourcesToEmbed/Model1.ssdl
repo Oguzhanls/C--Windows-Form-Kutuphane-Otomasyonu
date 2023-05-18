@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KutuphaneOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="kitapdzenle">
+    <Key>
+      <PropertyRef Name="kitap_id" />
+    </Key>
+    <Property Name="kitap_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kitap_adi" Type="varchar" MaxLength="50" />
+    <Property Name="kitap_yazari" Type="varchar" MaxLength="50" />
+    <Property Name="yayin_evi" Type="varchar" MaxLength="50" />
+    <Property Name="b_Tarihi" Type="datetime" />
+    <Property Name="kitap_turu" Type="varchar" MaxLength="50" />
+    <Property Name="kitap_raf" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="KutuphaneOtomasyonDBModelStoreContainer">
+    <EntitySet Name="kitapdzenle" EntityType="Self.kitapdzenle" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

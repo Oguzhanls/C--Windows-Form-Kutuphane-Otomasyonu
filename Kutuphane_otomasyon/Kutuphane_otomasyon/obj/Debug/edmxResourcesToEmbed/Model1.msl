@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KutuphaneOtomasyonDBModelStoreContainer" CdmEntityContainer="KutuphaneOtomasyonDBEntities">
+    <EntitySetMapping Name="kitapdzenle">
+      <EntityTypeMapping TypeName="KutuphaneOtomasyonDBModel.kitapdzenle">
+        <MappingFragment StoreEntitySet="kitapdzenle">
+          <ScalarProperty Name="kitap_id" ColumnName="kitap_id" />
+          <ScalarProperty Name="kitap_adi" ColumnName="kitap_adi" />
+          <ScalarProperty Name="kitap_yazari" ColumnName="kitap_yazari" />
+          <ScalarProperty Name="yayin_evi" ColumnName="yayin_evi" />
+          <ScalarProperty Name="b_Tarihi" ColumnName="b_Tarihi" />
+          <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+          <ScalarProperty Name="kitap_raf" ColumnName="kitap_raf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
